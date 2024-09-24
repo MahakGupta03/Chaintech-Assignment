@@ -1,0 +1,43 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaintech Network</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="{% static '/home.css' %}" rel="stylesheet" />
+    {% block css %}{% endblock %}
+    
+</head>
+<body>
+    <header>
+        <h1>CHAINTECH NETWORK</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/users">Users</a>
+        </nav>
+    </header>   
+    <main>
+        {% block start %}{% endblock %}
+    </main>
+    <footer>
+
+        <div class="footer-content"></div>
+            <span>Email: contact@chaintechnetwork.com</span>
+            <span> | </span>
+            <span>Phone: +1 234 567 890</span>
+            <span> | </span>
+            <span>Address: 304, zone A, Indraprastha Corporate, Prahlad Nagar, Ahmedabad, Gujarat</span>
+            <span> | </span>
+            <span class="footer-social">
+                <a href="https://www.linkedin.com/company/chaintech-network/" target="_blank">Facebook</a>
+                <span> | </span>
+                <a href="https://www.linkedin.com/company/chaintech-network/" target="_blank">Twitter</a>
+                <span> | </span>
+                <a href="https://www.linkedin.com/company/chaintech-network/" target="_blank">LinkedIn</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block start%}
+<h2>Register Yourself</h2>
+        <blockquote>
+            <i>{{ quote }}</i>
+        </blockquote>
+        <form method="post" action="/submit/">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input class="input-field" type="text" id="name" name="name" required>
+            <label  for="email">Email:</label>
+            <input class="input-field" type="email" id="email" name="email" required>
+            <label for="contact">Mobile No.:</label>
+            <input class="input-field" type="number" id="phone" name="phone" required>
+            <label for="contact">Gender:</label>
+            <select class="input-field" name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            <button type="submit">Submit</button>
+        </form>
+{%endblock%}
+
+
+
+
+
+
+

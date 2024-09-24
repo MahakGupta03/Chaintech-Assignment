@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block css%}
+<link href="{% static '/userlist.css' %}" rel="stylesheet" />
+{%endblock%}
+
+{%block start%}
+<h2>Registered Users</h2>
+<table class="user-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Gender</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.gender }}</td>
+      
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/">Back to Home</a>
+
+
+{%endblock%}
